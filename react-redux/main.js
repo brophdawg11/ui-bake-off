@@ -13,6 +13,7 @@ function render() {
   ReactDOM.render(
     <Counter
       value={store.getState().count}
+      onIncrementAsync={() => action('INCREMENT_ASYNC')}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')} />,
     document.getElementById('app')

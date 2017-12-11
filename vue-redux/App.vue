@@ -1,5 +1,6 @@
 <template>
     <counter :value="value"
+             :onIncrementAsync="onIncrementAsync"
              :onIncrement="onIncrement"
              :onDecrement="onDecrement">
     </counter>
@@ -22,6 +23,9 @@ export default {
         };
     },
     methods: {
+        onIncrementAsync() {
+            return action('INCREMENT_ASYNC');
+        },
         onIncrement() {
             return action('INCREMENT');
         },
