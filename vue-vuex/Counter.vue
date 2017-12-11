@@ -17,22 +17,10 @@
 export default {
     name: 'counter',
 
-    computed: {
-        value() {
-            return this.$store.state.count;
-        },
+    props: {
+        value: Number,
+        onIncrement: Function,
+        onDecrement: Function,
     },
-
-    methods: {
-        onIncrement() {
-            return this.$store.commit('INCREMENT');
-        },
-        onDecrement() {
-            return this.$store.commit('DECREMENT');
-        },
-    }
 };
 </script>
-
-<style scoped>
-</style>

@@ -2,7 +2,7 @@
 import Vue from 'vue';
 
 // App Components
-import Counter from './Counter';
+import App from './App';
 
 // Utilities
 import store from './store';
@@ -11,6 +11,6 @@ import store from './store';
 new Vue({
     el: '#app',
     store,
-    render: h => h(Counter),
+    render: h => h(App),
 });
 /* eslint-enable no-new */
