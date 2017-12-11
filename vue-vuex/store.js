@@ -18,6 +18,12 @@ const mutations = {
 };
 /* eslint-enable no-param-reassign */
 
+const actions = {
+    INCREMENT_ASYNC({ commit }) {
+        setTimeout(() => commit('INCREMENT'), 1000);
+    },
+};
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -27,6 +33,7 @@ export default new Vuex.Store({
     state: {
         count: 0
     },
-    mutations: mutations,
+    mutations,
+    actions,
 });
 

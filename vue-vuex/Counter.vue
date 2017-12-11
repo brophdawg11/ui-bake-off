@@ -1,5 +1,8 @@
 <template>
   <div>
+    <button @click="onIncrementAsync()">
+      Increment after 1 second
+    </button>
     <button @click="onIncrement()">
       Increment
     </button>
@@ -19,6 +22,7 @@ export default {
 
     props: {
         value: Number,
+        onIncrementAsync: Function,
         onIncrement: Function,
         onDecrement: Function,
     },
