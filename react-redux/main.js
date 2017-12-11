@@ -5,9 +5,7 @@ import ReactDOM from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 
 import Counter from './Counter'
-import reducer from './reducers'
-
-const store = createStore(reducer)
+import store from './store'
 
 const action = type => store.dispatch({type})
 
