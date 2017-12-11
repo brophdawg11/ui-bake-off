@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --open --hot",
-    "build": "webpack --progress --hide-modules"
+    "build": "webpack --progress --hide-modules",
+    "start": "npm run build && python -m SimpleHTTPServer 8000"
   },
   "dependencies": {
     "redux-logger": "3.0.6",
@@ -29,7 +30,6 @@
     "revue": "3.0.0",
     "vue-loader": "^13.0.5",
     "vue-template-compiler": "^2.4.4",
-    "vuex": "3.0.1",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1"
   }

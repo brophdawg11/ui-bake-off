@@ -15,7 +15,7 @@ function render() {
       value={store.getState().count}
       onIncrement={() => action('INCREMENT')}
       onDecrement={() => action('DECREMENT')} />,
-    document.getElementById('root')
+    document.getElementById('app')
   )
 }
 
