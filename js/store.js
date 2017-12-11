@@ -1,5 +1,8 @@
 import { applyMiddleware, createStore } from 'redux';
 import logger from 'redux-logger'
+import createSagaMiddleware from 'redux-saga'
+
+import rootSaga from './sagas';
 
 const reducer = function counter(state = 0, action) {
   switch (action.type) {
@@ -22,4 +25,14 @@ const initialState = {
     count: 0,
 };
 
-export default createStore(reducer, initialState, applyMiddleware(logger));
+const sagaMiddleware = createSagaMiddleware();
+
+const store = createStore(
+    reducer,
+    initialState,
+    applyMiddleware(logger, sagaMiddleware)
+);
+
+sagaMiddleware.run(rootSaga);
+
+export default store;
